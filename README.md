@@ -39,4 +39,9 @@ cd conf
 sudo vim nginx.conf
 ```
 ![image](https://user-images.githubusercontent.com/68554367/192937685-b617e0be-8441-401c-a69e-ac6b84bc96eb.png)
+[nginx负载均衡策略](https://www.w3schools.cn/nginx/nginx_upstream_hash.asp#:~:text=%E8%BD%AE%E8%AF%A2%EF%BC%88Round%20Robin%EF%BC%89%E7%AD%96%E7%95%A5%E6%98%AF,Nginx%20%E9%85%8D%E7%BD%AE%E4%B8%AD%E9%BB%98%E8%AE%A4%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E7%AD%96%E7%95%A5%EF%BC%8C%E8%AF%A5%E7%AD%96%E7%95%A5%E5%B0%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E8%AF%B7%E6%B1%82%E4%BE%9D%E6%AC%A1%E5%88%86%E9%85%8D%E7%BB%99%E5%90%8E%E7%AB%AF%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%8A%82%E7%82%B9%EF%BC%8C%E5%AF%B9%E5%90%8E%E7%AB%AF%E9%9B%86%E7%BE%A4%E4%B8%AD%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%9E%E7%8E%B0%E8%BD%AE%E6%B5%81%E5%88%86%E9%85%8D%E3%80%82)
+配置完成，重启
+```
+./nginx -s reload
+```
 
