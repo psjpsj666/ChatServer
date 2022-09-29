@@ -3,7 +3,7 @@
 1. 使用第三方json库实现消息的序列化和反序列化，[JSON for modern C++](https://github.com/nlohmann/json)，直接包含头文件json.hpp
 2. TCP长连接通信协议，使用[muduo网络库](https://github.com/chenshuo/muduo)实现了Reactor模式的多线程服务器
 3. 使用MySQL建立用户列表/好友列表/离线消息列表/群组信息列表
-4. 使用[nginx](https://github.com/nginx/nginx)的负载均衡模块配置负载均衡器
+4. 使用[nginx](http://nginx.org/en/download.html)的负载均衡模块配置负载均衡器
 5. 使用Redis作为中间件，依靠发布-订阅模式来实时建立集群服务器之间的通信。
 
 ## MySQL表设计
@@ -19,9 +19,24 @@
 ![image](https://user-images.githubusercontent.com/68554367/192934194-e928a6af-ee21-4050-9772-cbb0197a414f.png)
 
 ## Nginx负载均衡配置
-下载nginx源码，root权限下进行编译
+nginx安装需要配置环境：
+```
+sudo apt-get install libpcre3 libpcre3-dev
+sudo apt-get install zlib1g-dev
+sudo apt-get install openssl libssl-dev
+```
+[下载nginx源码](http://nginx.org/en/download.html)，root权限下进行编译
 ```
 ./configure --with-stream
 ./make && make install
 ```
 编译完成后，默认安装在/usr/local/nginx目录
+启动nginx，并配置负载均衡模块
+```
+cd sbin
+sudo ./nginx
+cd conf
+sudo vim nginx.conf
+```
+![image](https://user-images.githubusercontent.com/68554367/192937685-b617e0be-8441-401c-a69e-ac6b84bc96eb.png)
+
