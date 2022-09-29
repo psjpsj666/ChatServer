@@ -1,2 +1,2 @@
-# chatserver
-可以工作在nginx tcp负载均衡环境中的集群聊天服务器和客户端源码  基于muduo实现
+# 集群聊天软件
+1. 使用第三方json库实现消息的序列化和反序列化，[JSON for modern C++](https://github.com/nlohmann/json)，直接包含头文件json.hpp
