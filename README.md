@@ -6,6 +6,24 @@
 4. 使用[nginx](http://nginx.org/en/download.html)的负载均衡模块配置负载均衡器
 5. 使用Redis作为中间件，依靠发布-订阅模式来实时建立集群服务器之间的通信。
 
+## 消息类型定义
+```
+enum EnMsgType
+{
+    LOGIN_MSG = 1, // 登录消息
+    LOGIN_MSG_ACK, // 登录响应消息
+    LOGINOUT_MSG, // 注销消息
+    REG_MSG, // 注册消息
+    REG_MSG_ACK, // 注册响应消息
+    ONE_CHAT_MSG, // 聊天消息
+    ADD_FRIEND_MSG, // 添加好友消息
+
+    CREATE_GROUP_MSG, // 创建群组
+    ADD_GROUP_MSG, // 加入群组
+    GROUP_CHAT_MSG, // 群聊天
+};
+```
+
 ## MySQL表设计
 ### User表
 ![image](https://user-images.githubusercontent.com/68554367/192934045-3fb2d752-722f-4762-b9c8-9a6e4c2ec20f.png)
